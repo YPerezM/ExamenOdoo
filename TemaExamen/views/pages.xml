@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <!-- === Services Page === -->
+        <template name="Servicios page" id="website.servicios" page="True">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Our Services</h1>
+                        <ul class="services">
+                            <li>Cloud Hosting</li>
+                            <li>Support</li>
+                            <li>Unlimited space</li>
+                        </ul>
+                        <!-- === Snippets' area === -->
+                        <div class="oe_structure" />
+                    </div>
+                </div>
+            </t>
+        </template>
+        
+        
+        <template name="QuienesSomos page" id="website.quienessomos" page="True">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Quienes Somos</h1>
+                        <ul class="quienessomos">
+                            <li>
+                                <h3>El que manda</h3>
+                                <img src="/TemaExamen/static/src/img/muktitasking-assistant-001.jpg"  height="200" width="200"/>
+                                <h4>The boss</h4>
+                            </li>
+                            <li>
+                                <h3>Recursos humanos</h3>
+                                <img src="/TemaExamen/static/src/img/allaskeres.jpg"  height="200" width="200"/>
+                                <h4>Trabajo duro</h4>
+                            </li>
+                            <li>
+                                <h3>El tutor</h3>
+                                <img src="/TemaExamen/static/src/img/37708564A3CD48328A1C035026D9D378.ashx.jpg"  height="200" width="200"/>
+                                <h4>Cansado de enseñar</h4>
+                            </li>
+                        </ul>
+                        <!-- === Snippets' area === -->
+                        <div class="oe_structure" />
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        
+        
+
+        <record id="servicios_page_link" model="website.menu">
+            <field name="name">Servicios</field>
+            <field name="url">/page/servicios</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">99</field>
+        </record>
+        
+          <record id="quienessomos_page_link" model="website.menu">
+            <field name="name">Quienes Somos</field>
+            <field name="url">/page/quienessomos</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">80</field>
+        </record>
+
+
+    </data>
+</openerp>
